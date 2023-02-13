@@ -1,9 +1,6 @@
 <template>
   <div>
-    <ProductDetails :product="product" /> 
-    <!-- <p>{{ product.title }}</p>
-    <p>{{ product.price }}</p>
-    <p>{{ product.id }}</p> -->
+    <ProductDetails :product="product" />
   </div>
 </template>
 
@@ -12,4 +9,7 @@
   const uri = 'https://fakestoreapi.com/products/'+id
 
   const { data: product } = await useFetch(uri)
+  if (!product.value) {
+    throw createError({ statusCode: 404, statusMessage: 'Product not found', fatal: true })
+  }
 </script>
