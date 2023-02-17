@@ -5,7 +5,6 @@
         <NuxtLink to="/" class="font-bold">Site Name</NuxtLink>
         <ul class="flex gap-4">
           <li><NuxtLink to="/">Home</NuxtLink></li>
-          <li><NuxtLink to="/about">About</NuxtLink></li>
           <li><NuxtLink to="/products">Products</NuxtLink></li>
           <li><NuxtLink to="/profile">Profile</NuxtLink></li>
         </ul>
